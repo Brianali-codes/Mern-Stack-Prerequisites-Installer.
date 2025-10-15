@@ -1,15 +1,17 @@
 @echo off
 :: ===========================================
-:: MERN Stack Development Environment Installer (By brian ali)
+:: MERN Stack Development Environment Installer. (By Brian Ali - https://www.github.com/brianali-codes)
 :: ===========================================
 
 color 0A
-echo Lets goo! Starting MERN Stack setup...
+echo Starting the MERN Stack setup...
+echo.
 
-:: Step 1: Check for admin rights
-net session >nul 2>&1
-if %errorLevel% neq 0 (
+
+net file >nul 2>&1
+if %errorlevel% neq 0 (
     echo ❌ Please run this script as Administrator.
+    echo Right-click this file and choose "Run as Administrator".
     pause
     exit /b
 )
@@ -26,8 +28,8 @@ if %errorLevel% neq 0 (
     echo ✅ Chocolatey is already installed.
 )
 
-:: Refresh environment
-refreshenv >nul 2>&1
+:: Refresh environment (safe to ignore errors if it's the first run)
+:: refreshenv >nul 2>&1
 
 :: Step 3: Install required packages
 echo.
