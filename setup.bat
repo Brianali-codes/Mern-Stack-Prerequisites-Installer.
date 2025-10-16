@@ -1,13 +1,13 @@
 @echo off
 :: ===========================================
-:: MERN Stack Development Environment Installer. (By Brian Ali - https://www.github.com/brianali-codes)
+:: MERN Stack Development Environment Installer (By Brian Ali - github : https://www.github.com/brianali-codes)
 :: ===========================================
 
 color 0A
-echo Starting the MERN Stack setup...
+echo 🚀 Starting MERN Stack setup...
 echo.
 
-
+:: Step 1: Check for admin rights (safe method)
 net file >nul 2>&1
 if %errorlevel% neq 0 (
     echo ❌ Please run this script as Administrator.
